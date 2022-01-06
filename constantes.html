@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*Permite crear variables constantes 
+    -No se puede inicializar una constante vacia
+    -No se puede reasignar una varianble const con valores primitivos
+    */
+    const PI = 3.1416;
+    console.log(PI);
+  
+    //En variables compuestassi se puede reasignar, añadir o eliminar valores o propiedades
+    const objeto = {
+      nombre: "Sol",
+      edad: 21
+    }
+
+    const colores = ["blanco","negro", "azul"];
+    console.log(objeto);
+    console.log(colores);
+
+    objeto.correo = "example@gmail.com";
+    colores.push("anaranjado");
+  
+    console.log(objeto);
+    console.log(colores);
+
+    /*Si a lo largo del flujo del programa la variable va a cambiar utiliza let*/
+
+
+  </script>
+</body>
+</html>
