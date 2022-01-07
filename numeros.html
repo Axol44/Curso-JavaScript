@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6";
+
+    console.log(a,b)
+    //el método toFixed sirve para poner un número de decimales específico
+    console.log(c.toFixed(1))
+    console.log(c.toFixed(3))
+    //Devuelve la parte entera de un número
+    console.log(parseInt(c))
+    console.log(parseFloat(c))
+
+    //Para procesar valores númericos de un formulario es necesario realizarles un "casting"
+    //que se refiere a convertilos a numeros dado que se reciben como strings
+    console.log(typeof c, typeof d)
+    console.log(a + b)
+    //En js hay problemas con operaciones con decimales 
+    console.log(c + parseInt(d))
+    console.log(c + parseFloat(d))
+    console.log(c + Number.parseInt(d))
+    console.log(c + Number.parseFloat(d))
+
+    
+
+
+  </script>
+</body>
+</html>
