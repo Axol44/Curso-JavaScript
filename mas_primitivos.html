@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let verdadero = true;
+    let falso = false;
+    let v = Boolean(true);
+    let f = Boolean(false);
+
+    console.log(verdadero, falso, v, f)
+    //VALORES TRUTHY
+    /*
+     ({})
+     ([])
+     (42)
+     ("foo")
+     (new Date())
+     (-42)
+     (3.14)
+     (-3.14)
+     (Infinity)
+     (-Infinity)
+    */
+
+    //VALORES FALSY
+    /*
+     (false)
+     (null)
+     (undefined)
+     (0)
+     (-0)
+     (0n)
+     (NaN)    
+     ("") */
+
+    // UNDEFINED, NULL, NAN
+    /*undefined 
+      representan un valor ausente (no tiene valor), no a sido inicializada
+    */
+    let indefinido;
+    console.log(indefinido);
+    
+    /*null
+      representa un valor ausente, es un valor intencionalmente indefinido
+    */
+    let nulo = null;
+    console.log(null);
+    
+    //NaN - Not a number (ejemplo cuando haces operaciones aritmeticas entre valores no númericos)
+    let noEsUnNumero = "hola" * 3.4
+    console.log(noEsUnNumero)
+
+
+
+
+  </script>
+</body>
+</html>
