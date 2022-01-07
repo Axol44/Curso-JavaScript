@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Cadenas de texto
+    let nombre = "jon";
+    let apellido = "MirCha";
+    let saludo = new String("Hola mundo");
+    let lorem = "          Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+    console.log(nombre, apellido, saludo);
+    console.log(
+      nombre.length,
+      apellido.length,
+      saludo.length,
+      nombre.toLocaleUpperCase(),
+      apellido.toLocaleLowerCase(),
+      lorem.includes("dummy"),
+      //quita espacios en blanco
+      lorem.trim(),
+      lorem.split(" ")
+    )
+
+
+  </script>
+</body>
+</html>
