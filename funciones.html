@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=}, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento.
+     Opcionalmente, una función puede aceptar párametros y devolver un valor.
+     
+     Las funciones en JavaScript son objetos, un tipo especial de onjetos.
+     
+     Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como 
+     argumentos y usarse como un valor de retorno. */
+    
+    //Función Declarada
+    function estoEsUnaFuncion() {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+
+    //Invocación de función
+/*     estoEsUnaFuncion();
+    estoEsUnaFuncion();
+    estoEsUnaFuncion(); */
+
+    function unaFuncionQueDevueveValor() {
+      console.log("Uno");
+      return 19;
+      console.log("Dos");
+      console.log("Tres");
+      return "La función ha retornado unca Cadena de texto";
+    }
+    //let valorDeFuncion = unaFuncionQueDevueveValor();
+    //console.log(valorDeFuncion);}
+
+    function saludar(nombre="Desconocido", edad= 0) {
+      console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+    }
+
+    saludar("Kenai", 7);
+    saludar();
+  
+    //Debido al hoisting las variables y las funciónes se ordenan primero 
+    funcionDeclarada();
+
+    function funcionDeclarada() {
+      console.log(`Esto es una función declarada, puede invocarse en cualquier 
+      parte de nuetro código, incluso antes de que la función sea declarada.`);
+    }
+    funcionDeclarada()
+
+    //funcion anónima
+    //funcionexpresada();
+    
+    const funcionexpresada = function() {
+      console.log(`ESto es una función expresada, si invocamos esta función antes de su definición JS nos dirá 
+      'Cannot access 'funcionexpresada' before initialization' `)
+    }
+
+    funcionexpresada();
+
+  </script>
+</body>
+</html>
