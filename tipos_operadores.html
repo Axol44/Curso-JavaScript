@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*Operadores 
+      Aritméticos: + - * / % 
+    */
+    let a = 5 + (5 - 10) * 3;
+    let modulo = 5 % 2; 
+
+    console.log(a, modulo)
+
+    /*Operadores relacionales
+    console.log(8 > 9);
+    console.log(9 > 8);
+    console.log(8 >= 9);
+    console.log(9 >= 8);
+    console.log(7 > 7);
+    console.log(7 >= 7);
+    */
+
+    /*
+    = -> asignación de variable
+    == -> comparación de valores
+    === -> comparación de tipo de dato y valor
+    */
+
+    console.log(7 == 7);
+    console.log(7 == "7");
+    console.log(0 == false);
+
+    console.log(7 === 7);
+    console.log(7 === "7");
+    console.log(0 === false);
+
+    /*Operadores de incremento*/
+    let i = 1;
+
+    //i = i + 2;
+    i *= 3;
+    console.log(i)
+
+    /*operador unario*/
+    i++;
+    i--;
+    // de esta manera el operador unario puede influir en el flujo del programa.    ++1;
+
+    /* Operadores lógicos: Not !, Or ||, And && */
+    console.log(!false);
+    console.log(!true);
+    console.log((9 === 9) || ("9" === 9));
+    console.log((9 === 9) && ("9" === 9));
+    console.log((9 === 9) && ("9" === "9")); 
+
+  </script>
+</body>
+</html>
