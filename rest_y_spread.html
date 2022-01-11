@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parámetros REST & operador Spread</title>
+</head>
+<body>
+  <script>
+    //Parámetros REST son una forma que virtualmente se pueden ir agregando parámetros infinitos, ya sea en variables o funciones.
+    function sumar(a, b, ...c) {
+      let resultado = a+b;
+
+      c.forEach(function (n) {
+        resultado += n
+      }); 
+
+      return resultado;
+    }
+
+    console.log(sumar(1,2));
+    console.log(sumar(1,2,3));
+    console.log(sumar(1,2,3,4));
+    console.log(sumar(1,2,3,4,5));
+
+    //permite ampliar una expresión
+    const arr1 = [1,2,3,4,5],
+    arr2 = [6,7,8,9,0]
+    console.log(arre1,arr2);
+
+    // Expande o fuciona en solo un elemento a las expresiones 
+    const arr3 = [...arr1, ...arr2];
+    console.log(arr3)
+
+
+  </script>
+</body>
+</html>
