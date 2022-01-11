@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototipos</title>
+</head>
+<body>
+  <Script>
+    //POO
+    /* Clases - Modelo a seguir.
+      Objetos - Es una instancia de una clase.
+      Atributos - Es una carácteristica o propiedad del objeto (son variables dentro de un objeto.)
+      Métodos - son las acciones que un objeto puede realizar (son funciones dentro de un objeto.)
+    */
+    const animal = {
+      nombre: "snoopy",
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+    }
+    
+    const animal2 = {
+      nombre: "Lola bunny",
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+    }
+    console.log(animal, animal2);
+
+    //función constructura
+    //Es recomendable que las funcioConstr solo contengan los atributos y no los métodos puesto que tienen a repetirse
+    function Animal0(nombre, genero) {
+      //atributos
+      this.nombre = nombre;
+      this.genero = genero;
+
+      //métodos
+      //En este caso podemos escribir de manera más corta la función
+      this.sonar = function() {
+        console.log("Hago sonidos porque estoy vivo");
+      }
+      this.saludar = function() {
+        console.log(`Hola me llamo ${this.nombre}. `);
+      }
+    }
+
+    //Función constructora donde asignamos los métodos al Prototipo, no a la función como tal
+    function Animal(nombre, genero) {
+      this.nombre = nombre;
+      this.genero = genero;
+
+    }
+
+    //Métodos agregados al prototipo de la función constructora
+    Animal.prototype.sonar = function() {
+      console.log("Hago sonidos porque estoy vivo");
+    }
+    Animal.prototype.saludar = function() {
+      console.log(`Hola me llamo ${this.nombre}. `);
+    }
+    
+    const snoppy = new Animal("Snoppy", "Macho"),
+    lola = new Animal("Lola Bunny", "Hembra"); 
+
+    console.log(snoppy, lola);
+
+    snoppy.sonar();
+    snoppy.saludar();
+    lola.sonar();
+    lola.saludar();
+    
+    </Script>
+</body>
+</html>
