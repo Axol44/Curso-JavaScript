@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos literales</title>
+</head>
+<body>
+  <Script>
+    let nombre = "Kenai",
+    edad = 7;
+
+    const perro  = {
+      nombre: nombre,
+      edad: edad,
+      ladrar: function () {
+        console.log("guauuu, guauuu");
+      }
+    }
+
+    console.log(perro);
+    perro.ladrar();
+
+    //Nueva forma simplificada
+    const dog = {
+      nombre,
+      edad,
+      raza: "Callejero",
+      //nueva forma de declarar métodos en objetos literales.
+      ladrar() {
+        console.log("guauu, guauu, guauu")
+      }
+    }
+
+    console.log(dog);
+    dog.ladrar();
+  </Script>
+</body>
+</html>
