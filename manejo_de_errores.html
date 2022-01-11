@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Se gestionan errores
+    try {
+      console.log("En en el Try se agrega el código a evaluar");
+      noExiste;
+      //En el momento en el que el bloque try detecta el error, salta al catch sin terminar las instrucciones del bloque try
+      console.log("Segundo mensaje en el try");
+    } catch (error) {
+      console.log("Catch captura cualquier error surgido o lanzado en el try");
+      console.log(error);
+    } finally {
+      console.log("El bloque finally se ejecutará siempre al final de unbloque try-catch")
+    }
+
+    try {
+      let numero = 3;
+
+      if(isNaN(numero)) {
+        throw new Error("El caractér introducido no es un número");
+      }
+
+      console.log(numero * numero);
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+</body>
+</html>
