@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuración</title>
+</head>
+<body>
+  <script>
+    /*La destructuración o destructuring es una nueva forma de asignar valores a arreglos o objetos*/
+    const numeros = [1,2,3];
+
+    //Sin destructuración
+    let uno = numeros[0],
+    dos = numeros[1],
+    tres = numeros[2];
+    console.log(uno,dos,tres);
+
+    //Con destructuración
+    const [one, two, three] = numeros;
+    console.log(one, two, three);
+
+    let persona = {
+      nombre: "jon",
+      apellido: "Mircha",
+      edad: 35
+    };
+
+    /*Es importante que los nombres de las nuevas variables coincidan con los atributos del objeto.
+      No importa el orden de las variables*/
+    let {nombre, apellido, edad} = persona;
+    console.log(nombre, apellido, edad);
+  </script>
+</body>
+</html>
