@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow functions</title>
+</head>
+<body>
+  <script>
+    /* Es una nueva forma de escribir funciones anónimas expresadas
+    const saludar = function () {
+      console.log("Hola");
+    }
+    */
+
+    //NUEVA FORMA, se omite la palabra function y se agrega =>
+    const saludar = () => {
+      console.log("Hola");
+    }
+    //Cuando solo tiene una instrucción se pueden omitir las llaves
+    const saludar2 = () => console.log("Hola");
+
+    //Si la función tiene un solo parámetro, los paréntesis se pueden omitir.
+    const saludar3 = nombre => console.log(`Hola ${nombre}`);
+
+    //El return se puede omitir
+    const sumar = (a,b) => a + b;
+    console.log(sumar(2,3));
+
+    const funcionDeVariasLineas = () => {
+      console.log("uno");
+      console.log("dos");
+    }
+
+    saludar();
+    saludar2();
+    saludar3("Sol");
+    funcionDeVariasLineas();
+
+    //Las arrow function tienen la capacidad de saltarse su contexto en el que están y heredar el contexto del objeto padre
+    function fun () {
+      console.log(this);
+    }
+
+    const perro = {
+      nombre: "kenay",
+      ladrar: () => {
+        console.log(this);
+      }
+    }
+
+    perro.ladrar();
+    console.log(perro); 
+  </script>
+</body>
+</html>
