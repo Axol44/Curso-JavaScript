@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+    function numeroCaracteres(cadena) {
+      try {
+        if (typeof(cadena) != 'string' ) {
+          throw new Error("No es una cadena.");
+        } 
+        return cadena.length
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    console.log(numeroCaracteres("dsds"));
+    //console.log(r);
+
+    //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+   
+    function recortar(cadena, numero) {
+      try {
+        if (typeof(cadena) != 'string' ) {
+          throw new Error("No es una cadena.");
+        } 
+        return cadena.slice(0,numero);
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    console.log(recortar("hola", 2));
+
+    //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    function separar(cadena, separador) {
+      try {
+        if (typeof(cadena) != 'string' ) {
+          throw new Error("No es una cadena.");
+        } 
+        return cadena.split(separador);
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    console.log(separar("hola que tal", " "));
+    //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+  
+    function repetir(cadena, numero) {
+      try {
+        if (typeof(cadena) != 'string' ) {
+          throw new Error("No es una cadena.");
+        } 
+        return cadena.repeat(cadena, numero);
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    repetir("hola",3)
+
+    // SOLUCIÓN DE JON
+    // 1) solución
+    const contarCaracteres = (cadena = "") => 
+    (!cadena) 
+    ? console.warn("No ingresaste ninguna cadena") 
+    : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+    contarCaracteres();
+    contarCaracteres("Hola Mundo");
+ 
+    // 2) solución
+    const recortarTexto = (cadena = "", longitud = undefined) =>
+      (!cadena)
+      ? console.warn("No ingresaste una cadena de texto")
+      : (longitud === undefined)
+        ? console.warn("No ingresaste la longitud para recortar el texto")
+        : console.info(cadena.slice(0, longitud));
+
+      recortarTexto("Hola Mundo", 4);
+      recortarTexto();
+      recortarTexto("Hola hola");
+      recortarTexto("",5);
+
+      // 3) solución
+      const cadenaAArreglo = (cadena = "", separador = undefined) =>
+        (!cadena)
+          ? console.warn("No ingresaste una cadena texto")
+          : (separador === undefined)
+            ? console.warn("No ingresaste el caracter separador")
+            : console.info(cadena.split(separador));
+
+      cadenaAArreglo(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque 
+      voluptas illum deleniti tempore! Laborum fugit corporis magnam, veniam eligendi, 
+      aliquam consequuntur natus repellendus nihil iusto, quisquam dicta distinctio officiis.`, " ");
+      cadenaAArreglo("Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic", ",");
+      cadenaAArreglo("Hola Mundo");
+      cadenaAArreglo("", "-");
+    
+      // 4) solución
+      const repetirTexto = (texto = "", veces = undefined) => {
+        if(!texto) return console.warn("No ingresaste un texto");
+        
+        if (veces === undefined) return console.warn("No ingresaste el número de veces a repetir el texto");
+
+        if (veces === 0) return console.error("El número de veces no puede ser 0");
+
+        if (Math.sign(veces) === -1) return console.error("El número de veces no puede ser negativo");
+
+        for(let i=1; i <= veces; i++) console.info(`${texto}, ${i}`);
+      }
+
+      repetirTexto("Hola Mundo!", 3);
+      repetirTexto("Hola Mundo!", 0);
+      repetirTexto("Hola Mundo!", -20);
+      repetirTexto("", 20);
+      repetirTexto("Hola Mundo!");
+  </script>
+</body>
+</html>
