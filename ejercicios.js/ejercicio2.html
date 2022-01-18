@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+    const invertir = (cadena = "") => 
+      (!cadena)
+      ? console.warn("No ingresaste una cadena")
+      : console.info(cadena.split("").reverse().join(""));
+    invertir("hola como estas");
+    
+    //6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+    const contadorDeRepeticiones = (texto = "", palabra = undefined) => {     
+      if(!texto) return console.warn("No ingresaste un texto");
+      if (palabra === undefined) return console.warn("No ingresaste una cadena de texto");
+
+      palabras = texto.split(" ");
+      contador = 0;
+
+      for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i] === palabra) {
+          contador += 1;
+        }  
+      }
+      
+      return console.log(`El número de repeticiones es ${contador}`);
+    }
+
+    contadorDeRepeticiones("hola mundo adios mundo", "mundo");
+
+
+    //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+    const esPalindromo = (cadena = "") => 
+      (!cadena)
+      ? console.warn("No ingresaste una cadena")
+      : (cadena.split("").reverse().join("").toLowerCase() == cadena.toLowerCase())
+        ? console.info("Son palindromos")
+        : console.info("No son palíndromos");
+
+    esPalindromo("Salas");
+
+    //8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+    const eliminarPatron = (texto = "", patron = "") => 
+      (!texto)  
+      ? console.warn("No ingresaste un texto")
+      : (!patron) 
+        ? console.warn("No ingresaste una cadena de texto")
+        : console.info(texto.replace(new RegExp(patron, "ig"), ""))
+
+    eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); 
+
+
+  </script>
+</body>
+</html>
+
