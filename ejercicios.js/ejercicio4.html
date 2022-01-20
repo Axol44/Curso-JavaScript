@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+  const esPrimo = (numero = undefined) => {
+    if (numero == 0) return console.warn("Debe ser un número diferente a cero")
+    if (!numero) return console.warn("No ingresaste un número.")
+    if (isNaN(numero)) return console.warn("Debe ser del tipo numerico.")
+
+    for (let i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        return console.log("Es un número primo.");
+      }
+    }
+    return console.log("No es un número primo.");
+  }
+
+/*   esPrimo();
+  esPrimo("ejem")
+  esPrimo(0);
+  esPrimo(13);
+  esPrimo(10); */
+
+  // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+  const esPar = (numero = undefined) => {
+    if (!numero) return console.warn("No ingresaste un número.")
+    if (isNaN(numero)) return console.warn("Debe ser del tipo numerico.")
+
+    if (numero % 2 == 0) {
+      return console.log("Es un número primo.")
+    } else {
+      console.log("No es un número primo.");
+    }
+  }
+
+  esPar();
+  esPar("fds");
+  esPar(6);
+  esPar(11);
+  
+  // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+  const convertir = (grados = undefined, unidad = undefined) => {
+    if (grados === undefined) return console.warn("No ingresaste grados a convertir")
+    if (isNaN(grados)) return console.warn("Los grados debe ser del tipo numerico.")
+
+    if (unidad === undefined) return console.warn("No ingresaste un valor en la unidad")
+    if (typeof(unidad) !== "string") return console.warn("El valor debe ser una cadena");
+    
+    if (!/(C|F)/.test(unidad)) return console.warn("La unidad no es reconocida.")
+
+    if (unidad == "C") {
+      return console.log(Math.round((grados * (9/5)) + 32));
+    } else {
+      return console.log(Math.round((grados - 32) * (5/9))); 
+    }
+  }
+
+  convertir();
+  convertir("212");
+  convertir(2);
+  convertir(212,true);
+  convertir(212,"F");
+
+  </script>
+</body>
+</html>
