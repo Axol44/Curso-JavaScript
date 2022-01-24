@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+    const devolverCuadrados = (arr = undefined) => {
+      if (arr == undefined) return console.warn("No ingresaste una cadena de números");
+      if (!(arr instanceof Array)) return console.error(`El valor introduccido no es un arreglo.`);
+      if (arr.length === 0) return console.error(`El arreglo está vacío`);
+
+      for (const x of arr) {
+        if (typeof(x) !== "number") return console.error(`El valor ${x} no es un número`);
+      }
+
+      const newArray = arr.map(x => x * x);
+      return console.log(newArray);
+    }
+
+    devolverCuadrados();
+    devolverCuadrados("2");
+    devolverCuadrados([]);
+    devolverCuadrados([1,2, {}]);
+    devolverCuadrados([1,5,3]);
+
+    //22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+    const mayorMenor = (arr = undefined) => {
+      if (arr == undefined) return console.warn("No ingresaste una cadena de números");
+      if (!(arr instanceof Array)) return console.error(`El valor introduccido no es un arreglo.`);
+      if (arr.length === 0) return console.error(`El arreglo está vacío`);
+
+      for (const x of arr) {
+        if (typeof(x) !== "number") return console.error(`El valor ${x} no es un número`);
+      }
+
+      return console.log(`El valor mayor: ${Math.max(...arr)}.\n El valor menor: ${Math.min(...arr)}.`)
+    }
+
+    mayorMenor();
+    mayorMenor(false);
+    mayorMenor([]);
+    mayorMenor([1,2,3,{}]);
+    mayorMenor([1, 4, 5, 99, -60]);
+
+    //23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+    const imparesYPares = (arr = undefined) => {
+      if (arr == undefined) return console.warn("No ingresaste una cadena de números");
+      if (!(arr instanceof Array)) return console.error(`El valor introduccido no es un arreglo.`);
+      if (arr.length === 0) return console.error(`El arreglo está vacío`);
+
+      for (const x of arr) {
+        if (typeof(x) !== "number") return console.error(`El valor ${x} no es un número`);
+      }
+
+      return console.log({
+        pares: arr.filter(x => x % 2 === 0),
+        impares: arr.filter(x => x % 2 === 1)
+      });
+    }
+
+    imparesYPares();
+    imparesYPares("hola");
+    imparesYPares([]);
+    imparesYPares([1,2,4,"ds"]);
+    imparesYPares([1,2,3,4,5,6]);
+
+  </script>
+</body>
+</html>
