@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    //No es un tipo primitivo
+    //Particularmente puede generar claves "especiales" NO STRINGS
+    let mapa = new Map();
+    //Para agregar valores es necesario una clave y valor
+    mapa.set("nombre", "Jon"); 
+    mapa.set("apellido", "MirCha"); 
+    mapa.set("edad", 35);
+
+    console.log(mapa); 
+    console.log(mapa.size);
+    console.log(mapa.has("correo")); 
+    console.log(mapa.has("nombre")); 
+    console.log(mapa.get("nombre")); 
+    mapa.set("nombre", "Jonathan MirCha"); 
+    console.log(mapa.get("nombre"));
+    mapa.delete("apellido"); 
+
+
+    mapa.set(19, "diecinueve");
+    mapa.set(false, "falso"); 
+    console.log(mapa);
+
+    for ([key, value] of mapa) {
+      console.log(`Llave: ${key}, valor ${value}`);
+    }
+  
+    const kenay = new Map([
+      ["nombre", "KEnay"],
+      ["edad", 13 ],
+      [null, "nulo"]
+    ])
+
+    const llavesMapa = [...kenay.keys()];
+    const valoresMapa = [...kenay.values()];
+
+    console.log(llavesMapa);
+    console.log(valoresMapa);
+
+
+  </script>
+</body>
+</html>
